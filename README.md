@@ -2,6 +2,7 @@
 Create an accordion using pure CSS3.
 
 # CSS Selectors
+Selectors are one of, if not, the most important parts of CSS. They shape the cascade and determine how styles are to be applied to elements on a page. CSS3 brought new selectors, opening a whole new world of opportunities and improvements to existing practices. Here we’ll discuss selectors, old and new, and how to best put them to use.
 
 ## Common Selectors
 
