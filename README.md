@@ -1,9 +1,9 @@
-# CSS-accordion
+# css-accordion
 Create an accordion using pure CSS3.
 
-## CSS Selectors
+# CSS Selectors
 
-### Common Selectors
+## Common Selectors
 
 **Type Selector** : Selects an element by its type. 
 
@@ -17,7 +17,7 @@ Example : ".tagline"
 
 Example : "#intro"
 
-### Child Selectors
+## Child Selectors
 
 **Descendant Selector** :	Selects an element that resides anywhere within an identified ancestor element.
 
@@ -27,7 +27,7 @@ Example : "article h2"
 
 Example : "article > p"
 
-### Sibling Selectors
+## Sibling Selectors
 
 **General Sibling Selector** :	Selects an element that follows anywhere after the prior element, in which both elements share the same parent.
 
@@ -37,7 +37,7 @@ Example : "h2 ~ p"
 
 Example : "h2 + p"
 
-### Attribute Selectors
+## Attribute Selectors
 
 **Attribute Present Selector** :	Selects an element if the given attribute is present.
 
