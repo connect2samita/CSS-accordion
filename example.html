@@ -25,9 +25,15 @@
         padding: 15px;
       }
       .col-4 {
-        width: calc(33.33% - 30px);
+        width: calc(50% - 30px);
         float: left;
         padding: 15px;
+      }
+      code {
+        background: #212121;
+        color: #FFF;
+        padding: 5px;
+        border-radius: 4px;
       }
     </style>
 
@@ -46,6 +52,7 @@
         background: #f2f2f2;
         cursor: pointer;
         display: block;
+        border-bottom: 1px solid #d3d3d3;
       }
       .accordion label::before {
         content: "\f273";
@@ -76,7 +83,7 @@
     <!-- MENU DROPDOWN LIST using CSS ':hover' selector -->
     <style media="screen">
       .menu-list {
-        min-width: 240px;
+        min-width: 300px;
         background: #acacac;
       }
 
@@ -192,18 +199,78 @@
             <div class="accordion-container">
               <div class="accordion">
                 <input type="checkbox" name="group" id="accordion1" />
-                <label for="accordion1">Accordion Title 1</label>
+                <label for="accordion1">Common Selectors</label>
                 <div class="info">
-                  <h4>Some Title or information for tile 1</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, aperiam voluptatum eum reiciendis voluptas ab sit libero dicta nisi eos facere repellendus consequuntur ratione nam maiores consequatur accusantium qui deleniti.</p>
+                    <h4>Type Selector : Selects an element by its type.</h4>
+
+                    <p>Example : <code>h1</code></p>
+
+                    <h4>Class Selector : Selects an element by the class attribute value, which may be reused multiple times per page.</h4>
+
+                    <p>Example : <code>.tagline</code></p>
+
+                    <h4>ID Selector : Selects an element by the ID attribute value, which is unique and to only be used once per page.</h4>
+
+                    <p>Example : <code>#intro</code></p>
                 </div>
               </div>
               <div class="accordion">
                 <input type="checkbox" name="group" id="accordion2" />
-                <label for="accordion2">Accordion Title 2</label>
+                <label for="accordion2">Child Selectors</label>
                 <div class="info">
-                    <h4>Some Title or information for tile 2</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, aperiam voluptatum eum reiciendis voluptas ab sit libero dicta nisi eos facere repellendus consequuntur ratione nam maiores consequatur accusantium qui deleniti.</p>
+                    <h4>Descendant Selector :	Selects an element that resides anywhere within an identified ancestor element.</h4>
+
+                    <p>Example : <code>article h2</code></p>
+
+                    <h4>Direct Child Selector :	Selects an element that resides immediately inside an identified parent element.</h4>
+
+                    <p>Example : <code>article > p</code></p>
+                </div>
+              </div>
+              <div class="accordion">
+                <input type="checkbox" name="group" id="accordion3" />
+                <label for="accordion3">Sibling Selectors</label>
+                <div class="info">
+                    <h4>General Sibling Selector :	Selects an element that follows anywhere after the prior element, in which both elements share the same parent.</h4>
+
+                    <p>Example : <code>h2 ~ p</code></p>
+
+                    <h4>Adjacent Sibling Selector :	Selects an element that follows directly after the prior element, in which both elements share the same parent.</h4>
+
+                    <p>Example : <code>h2 + p</code></p>
+                </div>
+              </div>
+              <div class="accordion">
+                <input type="checkbox" name="group" id="accordion4" />
+                <label for="accordion4">Attribute Selectors</label>
+                <div class="info">
+                    <h4>Attribute Present Selector :	Selects an element if the given attribute is present.</h4>
+
+                    <p>Example : <code>a[target]</code></p>
+
+                    <h4>Attribute Equals Selector :	Selects an element if the given attribute value exactly matches the value stated.</h4>
+
+                    <p>Example : <code>a[href="http://google.com/"]</code></p>
+
+                    <h4>Attribute Contains Selector :	Selects an element if the given attribute value contains at least once instance of the value stated.</h4>
+
+                    <p>Example : <code>a[href*="login"]</code></p>
+
+                    <h4>Attribute Begins With Selector :	Selects an element if the given attribute value begins with the value stated.</h4>
+
+                    <p>Example : <code>a[href^="https://"]</code></p>
+
+                    <h4>Attribute Ends With Selector :	Selects an element if the given attribute value ends with the value stated.</h4>
+
+                    <p>Example : <code>a[href$=".pdf"]</code></p>
+
+                    <h4>Attribute Spaced Selector :	Selects an element if the given attribute value is whitespace-separated with one word being exactly as stated.</h4>
+
+                    <p>Example : <code>a[rel~="tag"]</code></p>
+
+                    <h4>Attribute Hyphenated Selector :	Selects an element if the given attribute value is hyphen-separated and begins with the word stated.</h4>
+
+                    <p>Example : <code>a[lang|="en"]</code></p>
                 </div>
               </div>
             </div>
@@ -212,12 +279,11 @@
         <div class="col-4">
             <!-- MENU DROPDOWN LIST using CSS ':hover' selector -->
             <div class="menu-list">
-              <h4 class="title"> Visit Websites</h4>
+              <h4 class="title"> Other Repositories</h4>
               <ul>
-                <li><a target="_blank" href="quora.com">Quora</a></li>
-                <li><a target="_blank" href="twitter.com">Twitter</a></li>
-                <li><a target="_blank" href="linkedin.com">LinkedIn</a></li>
-                <li><a target="_blank" href="instagram.com">Instagram</a></li>
+                <li><a target="_blank" href="https://github.com/connect2samita">Developer Profile</a></li>
+                <li><a target="_blank" href="https://connect2samita.github.io/css3-accordion/">CSS3 Accordion</a></li>
+                <li><a target="_blank" href="https://connect2samita.github.io/gulp-automation-v3/">Gulp Automation v3</a></li>
               </ul>
             </div>
         </div>
@@ -225,11 +291,11 @@
         <div class="col-4">
           <!-- BUCKET LIST using CSS ':hover' and ':checked' selector -->
           <div class="bucket-list">
-            <h4 class="title"> Bucket List</h4>
+            <h4 class="title"> Bucket List (Click to Uncheck)</h4>
             <ul>
               <li>
-                <input type="checkbox" name="group" id="group_1" />
-                <label for="group_1">Visit Paris</label>
+                <input type="checkbox" name="group" id="group_1" checked/>
+                <label for="group_1">Visit Singapore</label>
               </li>
               <li>
                 <input type="checkbox" name="group" id="group_2" />
@@ -240,8 +306,8 @@
                 <label for="group_3">Go Scuba Diving</label>
               </li>
               <li>
-                <input type="checkbox" name="group" id="group_4" />
-                <label for="group_4">Visit New York</label>
+                <input type="checkbox" name="group" id="group_3" />
+                <label for="group_3">Go Sky Diving</label>
               </li>
             </ul>
           </div>
