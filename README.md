@@ -1,11 +1,13 @@
-# CSS3 Accordion
+# CSS3 Accordion ![GitHub followers](https://img.shields.io/github/followers/connect2samita.svg?style=social)
 Design and build an accordion using CSS3 features.
 
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/connect2samita/css3-accordion.svg?color=green) ![GitHub All Releases](https://img.shields.io/github/downloads/connect2samita/css3-accordion/total.svg)  ![GitHub](https://img.shields.io/github/license/connect2samita/css3-accordion.svg)
+
 ### Understand CSS3
-##### CSS Selectors
+#### CSS Selectors
 Selectors are one of, if not, the most important parts of CSS. They shape the cascade and determine how styles are to be applied to elements on a page. CSS3 brought new selectors, opening a whole new world of opportunities and improvements to existing practices. Here we’ll discuss selectors, old and new, and how to best put them to use.
 
-##### Common Selectors
+#### Common Selectors
 
 **Type Selector** : Selects an element by its type. 
 
@@ -19,7 +21,7 @@ Example : ```.tagline```
 
 Example : ```#intro```
 
-##### Child Selectors
+#### Child Selectors
 
 **Descendant Selector** :	Selects an element that resides anywhere within an identified ancestor element.
 
@@ -29,7 +31,7 @@ Example : ```article h2```
 
 Example : ```article > p```
 
-##### Sibling Selectors
+#### Sibling Selectors
 
 **General Sibling Selector** :	Selects an element that follows anywhere after the prior element, in which both elements share the same parent.
 
@@ -39,7 +41,7 @@ Example : ```h2 ~ p```
 
 Example : ```h2 + p```
 
-## Attribute Selectors
+#### Attribute Selectors
 
 **Attribute Present Selector** :	Selects an element if the given attribute is present.
 
