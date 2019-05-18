@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CSS Collpase and Expand</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- STYLE to make page look good -->
+    <style media="screen">
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+      .container {
+        max-width: 1024px;
+        margin: auto;
+      }
+      .row {
+        margin: 0 15px;
+      }
+      .col-12 {
+        width: calc(100% - 30px);
+        float: left;
+        padding: 15px;
+      }
+      .col-4 {
+        width: calc(33.33% - 30px);
+        float: left;
+        padding: 15px;
+      }
+    </style>
+
+    <!-- ACCORDION using CSS ':checked' selector -->
+    <style media="screen">
+      .accordion {
+        min-width: 400px;
+        background: #acacac;
+      }
+
+      .accordion label {
+        font-size: 1em;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 1rem;
+        background: #f2f2f2;
+        cursor: pointer;
+        display: block;
+      }
+      .accordion label::before {
+        content: "\f273";
+        font-size: 0.75em;
+        font-family: 'Ionicons';
+        vertical-align: middle;
+        margin-right: 1rem;
+      }
+
+      .accordion .info {
+        display: none;
+        color: #FFF;
+        padding: 1rem;
+        text-align: justify;
+      }
+
+      .accordion input[type=checkbox] {
+        display: none;
+      }
+      .accordion input[type=checkbox]:checked ~ label::before {
+        content: "\f368";
+      }
+      .accordion input[type=checkbox]:checked ~ .info {
+        display: block;
+      }
+    </style>
+
+    <!-- MENU DROPDOWN LIST using CSS ':hover' selector -->
+    <style media="screen">
+      .menu-list {
+        min-width: 240px;
+        background: #acacac;
+      }
+
+      .menu-list .title {
+        font-size: 1em;
+        text-transform: uppercase;
+        padding: 1rem;
+        background: #f2f2f2;
+        position: relative;
+        margin: 0;
+        cursor: pointer;
+      }
+      .menu-list .title::after {
+        content: "\f27f";
+        font-family: 'Ionicons';
+        vertical-align: middle;
+        position: absolute;
+        right: 10px;
+        margin-left: 10px;
+      }
+
+      .menu-list ul {
+        display: none;
+        padding: 0;
+        margin: 0;
+      }
+      .menu-list ul li {
+        display: flex;
+      }
+      .menu-list ul li:hover {
+        background: #333;
+      }
+      .menu-list ul li a {
+        color: #FFF;
+        flex: auto;
+        text-decoration: none;
+        padding: 1rem;
+      }
+
+      .menu-list .title:hover ~ ul {
+        display: block;
+      }
+      .menu-list .title ~ ul:hover {
+        display: block;
+      }
+    </style>
+
+    <!-- BUCKET LIST using CSS ':hover' and ':checked' selector -->
+    <style media="screen">
+      .bucket-list {
+        min-width: 300px;
+        background: #acacac;
+      }
+
+      .bucket-list .title {
+        font-size: 1em;
+        text-transform: uppercase;
+        padding: 1rem;
+        background: #f2f2f2;
+        position: relative;
+        margin: 0;
+        cursor: pointer;
+      }
+      .bucket-list .title::before {
+        content: "\f273";
+        font-size: 0.75em;
+        font-family: 'Ionicons';
+        vertical-align: middle;
+      }
+      .bucket-list .title:hover::before {
+        content: "\f368";
+      }
+
+      .bucket-list ul {
+        display: none;
+        padding: 0;
+        margin: 0;
+      }
+      .bucket-list ul li {
+        display: flex;
+      }
+      .bucket-list ul li label {
+        color: #FFF;
+        display: block;
+        padding: 1rem;
+        width: 100%;
+      }
+      .bucket-list ul li label:hover {
+        background: #333;
+        cursor: pointer;
+      }
+
+      .bucket-list ul li input[type=checkbox] {
+        display: none;
+      }
+      .bucket-list ul li input[type=checkbox]:checked ~ label {
+        text-decoration: line-through;
+      }
+
+      .bucket-list .title:hover ~ ul {
+        display: block;
+      }
+      .bucket-list .title ~ ul:hover {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+            <!-- ACCORDION using CSS ':checked' selector -->
+            <div class="accordion-container">
+              <div class="accordion">
+                <input type="checkbox" name="group" id="accordion1" />
+                <label for="accordion1">Accordion Title 1</label>
+                <div class="info">
+                  <h4>Some Title or information for tile 1</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, aperiam voluptatum eum reiciendis voluptas ab sit libero dicta nisi eos facere repellendus consequuntur ratione nam maiores consequatur accusantium qui deleniti.</p>
+                </div>
+              </div>
+              <div class="accordion">
+                <input type="checkbox" name="group" id="accordion2" />
+                <label for="accordion2">Accordion Title 2</label>
+                <div class="info">
+                    <h4>Some Title or information for tile 2</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, aperiam voluptatum eum reiciendis voluptas ab sit libero dicta nisi eos facere repellendus consequuntur ratione nam maiores consequatur accusantium qui deleniti.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <div class="col-4">
+            <!-- MENU DROPDOWN LIST using CSS ':hover' selector -->
+            <div class="menu-list">
+              <h4 class="title"> Visit Websites</h4>
+              <ul>
+                <li><a target="_blank" href="quora.com">Quora</a></li>
+                <li><a target="_blank" href="twitter.com">Twitter</a></li>
+                <li><a target="_blank" href="linkedin.com">LinkedIn</a></li>
+                <li><a target="_blank" href="instagram.com">Instagram</a></li>
+              </ul>
+            </div>
+        </div>
+
+        <div class="col-4">
+          <!-- BUCKET LIST using CSS ':hover' and ':checked' selector -->
+          <div class="bucket-list">
+            <h4 class="title"> Bucket List</h4>
+            <ul>
+              <li>
+                <input type="checkbox" name="group" id="group_1" />
+                <label for="group_1">Visit Paris</label>
+              </li>
+              <li>
+                <input type="checkbox" name="group" id="group_2" />
+                <label for="group_2">Ride a Horse</label>
+              </li>
+              <li>
+                <input type="checkbox" name="group" id="group_3" />
+                <label for="group_3">Go Scuba Diving</label>
+              </li>
+              <li>
+                <input type="checkbox" name="group" id="group_4" />
+                <label for="group_4">Visit New York</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

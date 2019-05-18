@@ -1,5 +1,5 @@
 # CSS3 Accordion ![GitHub followers](https://img.shields.io/github/followers/connect2samita.svg?style=social)
-Design and build an accordion using CSS3 features.
+Design and build an accordion or dropdown using CSS3 features.
 
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/connect2samita/css3-accordion.svg?color=green) ![GitHub All Releases](https://img.shields.io/github/downloads/connect2samita/css3-accordion/total.svg)  ![GitHub](https://img.shields.io/github/license/connect2samita/css3-accordion.svg)
 
